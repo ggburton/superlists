@@ -25,7 +25,7 @@ SECRET_KEY = 'a1j4$8iw_-u@q28(*ph^+y2l)y3gl5a3_p$^n0%8@%@47c#(=('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test.8urton.net:8000']
+ALLOWED_HOSTS = ['test.8urton.net']
 
 
 # Application definition
