@@ -13,9 +13,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 if 'DJANGO_DEBUG_FALSE' in os.environ:
-    DEBUG = False
+    DEBUG  = False
     SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
-    ALLOWED_HOSTS = os.environ['SITENAME']
+    ALLOWED_HOSTS = [os.environ['SITENAME']]
 else:
     DEBUG = True
     SECRET_KEY = 'devkeythatwewontuseinproduction'
