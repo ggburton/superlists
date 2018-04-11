@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn server for DOMAIN
+
+[Service]
+Restart=on-failure
+User=ubuntu
+WorkingDirectory=/home/ubuntu/projects/sites/DOMAIN
+EnvironmentFile=/home/ubuntu/projects/sites/DOMAIN/.env 
+
+ExecStart=/home/ubuntu/.local/share/virtualenvs/DOMAIN/bin/gunicorn \
+    --bind unix:/tmp/DOMAIN.socket superlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
